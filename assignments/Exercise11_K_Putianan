@@ -1,0 +1,4 @@
+userNumberInput = int(input("Enter a number: "))
+for i in range(userNumberInput):
+    x = (" " * (userNumberInput - i - 1)) + ("*" * (2 * i + 1))
+    print(x)
