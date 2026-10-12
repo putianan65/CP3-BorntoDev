@@ -1,0 +1,6 @@
+def vatCalculation(totalPrice):
+    result = totalPrice + (totalPrice * 7/100)
+    return result
+
+userPriceInput = float(input("กรุณากรอกราคาสินค้าของคุณ : "))
+print(vatCalculation(userPriceInput))
