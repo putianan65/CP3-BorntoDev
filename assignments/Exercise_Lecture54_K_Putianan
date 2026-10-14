@@ -1,0 +1,43 @@
+def login():
+    usernameInput = input("Username : ")
+    passwordInput = input("Password : ")
+    # ==== นำ return มาปรับใช้ login ให้ return ค่ากลับไปทีเดียว ====
+    return usernameInput == "admin" and passwordInput == "1234"
+
+def showMenu():
+    print("----- iShop -----")
+    print("1. Vat Calculator")
+    print("2. Price Calculator")
+
+def menuSelect():
+    userSelected = int(input(">> : "))
+    return userSelected
+
+def vatCalculator(totalPrice):
+    vat = 7
+    result = totalPrice + (totalPrice * vat / 100)
+    return result
+
+def priceCalculator():
+    price1 = int(input("First Product Price : "))
+    price2 = int(input("Second Product Price : "))
+    return vatCalculator(price1 + price2)
+
+# ========== โครงสร้างการทำงานของโปรแกรมนี้ (การบ้าน) ==========
+
+if login():
+    print("Login Successful")
+    showMenu()
+    choice = menuSelect()
+
+    if choice == 1:
+        total = int(input("Price (THB) : "))
+        print("Total Price (inc. VAT):", vatCalculator(total))
+
+    elif choice == 2:
+        total = priceCalculator()
+        print("Total Price (inc. VAT):", vatCalculator(total))
+    else:
+        print("Not a valid option")
+else:
+    print("Login failed")
