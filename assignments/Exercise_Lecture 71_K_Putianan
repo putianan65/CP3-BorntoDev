@@ -22,3 +22,16 @@ while True:
 
 showBill()
 showTotal()
+
+----------------------------------------------------------
+
+Please enter a menu option: ข้าวมันไก่ต้ม
+Please enter a Price: 45
+Please enter a menu option: ข้าวกะเพราหมูสับ
+Please enter a Price: 50
+Please enter a menu option: exit
+====My Food====
+ข้าวมันไก่ต้ม 45
+ข้าวกะเพราหมูสับ 50
+----Total----
+Total: 95 บาท
