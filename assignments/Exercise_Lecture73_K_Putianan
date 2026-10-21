@@ -1,0 +1,40 @@
+systemMenu = {"ข้าวหมกไก่":45, "ข้าวมันไก่ต้ม":40, "ข้าวมันไก่รวมมิตร":50, "ข้าวมันไก่ทอด":40 }
+menuList = []
+
+def showBill():
+    totalPrice = 0
+    print("====== MY FOOD ======")
+    for number in range(len(menuList)):
+        print(menuList[number][0], menuList[number][1])
+        totalPrice += menuList[number][1]
+
+    print("---------------------")
+    print("Total :", totalPrice, "THB")
+
+while True:
+    menuName = str(input("Plese Enter Menu : "))
+    if(menuName.lower() == "exit"):
+        break
+    else:
+        if menuName in systemMenu:
+            menuList.append([menuName, systemMenu[menuName]])
+        else:
+            print("Menu Not Found")
+
+showBill()
+
+---------------------------------------------------------------------------------
+
+Plese Enter Menu : ข้าวหมกไก่
+Plese Enter Menu : ข้าวมันไก่ต้ม
+Plese Enter Menu : ข้าวมันไก่รวมมิตร
+Plese Enter Menu : ข้าวมันไก่ทอด
+Plese Enter Menu : exit
+
+====== MY FOOD ======
+ข้าวหมกไก่ 45
+ข้าวมันไก่ต้ม 40
+ข้าวมันไก่รวมมิตร 50
+ข้าวมันไก่ทอด 40
+---------------------
+Total : 175 THB
