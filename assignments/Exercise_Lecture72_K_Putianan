@@ -1,0 +1,31 @@
+menuList = []
+
+def showBill():
+    print("====== MY FOOD ======")
+    for number in range(len(menuList)):
+        print(menuList[number][0], menuList[number][1])
+
+while True:
+    menuName = input("Plese Enter Menu : ")
+    if(menuName.lower() == "exit"):
+        break
+    else:
+        menuPrice = float(input("Price : " ))
+        menuList.append([menuName, menuPrice])
+
+showBill()
+
+------------------------------------------------------
+
+Plese Enter Menu : ข้าวมันไก่ต้ม
+Price : 40
+Plese Enter Menu : ข้าวมันไก่ทอด
+Price : 40
+Plese Enter Menu : ข้าวมันไก่รวมมิตร
+Price : 50
+Plese Enter Menu : exit
+
+====== MY FOOD ======
+ข้าวมันไก่ต้ม 40.0
+ข้าวมันไก่ทอด 40.0
+ข้าวมันไก่รวมมิตร 50.0
